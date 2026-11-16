@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  frontend:
+    # Mówimy Dockerowi, żeby zbudował kontener na podstawie Dockerfile w folderze frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    
+    # Przekierowujemy port z kontenera na Twój komputer
+    ports:
+      - "5173:5173"
+    
+    # Synchronizacja plików w czasie rzeczywistym! 
+    # Jak zapiszesz plik w VS Code, od razu zaktualizuje się w kontenerze.
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    
+    # Dodatkowe ustawienie dla odświeżania na żywo
+    environment:
+      - CHOKIDAR_USEPOLLING=true
