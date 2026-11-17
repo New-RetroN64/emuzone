@@ -1,5 +1,5 @@
-# Używamy lekkiej wersji środowiska Node.js
-FROM node:20-slim
+# Używamy lekkiej wersji środowiska Node.js (zmienione z 20 na 22)
+FROM node:22-slim
 
 # Ustawiamy katalog roboczy wewnątrz kontenera
 WORKDIR /app

@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   frontend:
     # Mówimy Dockerowi, żeby zbudował kontener na podstawie Dockerfile w folderze frontend
