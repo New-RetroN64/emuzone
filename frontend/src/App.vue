@@ -36,9 +36,9 @@ const closeGameModal = () => {
     <main class="main-container">
       <section class="intro-bar">
         <div>
-          <h2 class="section-title">Katalog Gier ({{ filteredGames.length }} / {{ games.length }})</h2>
+          <h2 class="section-title">Biblioteka Gier <span>({{ filteredGames.length }})</span></h2>
           <p class="section-desc">
-            Dotknij dowolnego elementu z listy, aby otworzyć okno z pełną zawartością obiektu JSON oraz kontrolkami obiektów zagnieżdżonych.
+            Wybierz tytuł z katalogu, aby poznać jego szczegóły, specyfikację techniczną oraz twórców.
           </p>
         </div>
 
@@ -46,7 +46,7 @@ const closeGameModal = () => {
           <input
             v-model="searchQuery"
             type="search"
-            placeholder="Szukaj gry lub platformy..."
+            placeholder="Szukaj tytułu, konsoli lub gatunku..."
             class="search-input"
           />
         </div>
@@ -77,7 +77,7 @@ const closeGameModal = () => {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 1.5rem 1.25rem 3rem;
+  padding: 2rem 1.25rem 3.5rem;
 }
 
 .intro-bar {
@@ -86,45 +86,61 @@ const closeGameModal = () => {
   align-items: flex-end;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 0, 127, 0.35);
 }
 
 .section-title {
-  margin: 0 0 0.35rem 0;
-  font-size: 1.4rem;
-  color: #f8fafc;
+  margin: 0 0 0.4rem 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+}
+
+.section-title span {
+  color: #ff007f;
 }
 
 .section-desc {
   margin: 0;
-  font-size: 0.9rem;
-  color: #94a3b8;
-  max-width: 650px;
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  max-width: 620px;
 }
 
 .search-box {
   width: 100%;
-  max-width: 320px;
+  max-width: 340px;
 }
 
 .search-input {
   width: 100%;
-  padding: 0.7rem 1rem;
-  border-radius: 10px;
-  border: 1px solid #334155;
-  background: #1e293b;
-  color: #f8fafc;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #00f3ff;
+  background: rgba(5, 5, 12, 0.85);
+  color: #ffffff;
   font-size: 0.9rem;
+  box-shadow: 0 0 12px rgba(0, 243, 255, 0.2);
+  transition: all 0.2s;
+}
+
+.search-input::placeholder {
+  color: #64748b;
 }
 
 .search-input:focus {
-  outline: 2px solid #6366f1;
-  border-color: transparent;
+  outline: none;
+  border-color: #ff007f;
+  box-shadow: 0 0 16px rgba(255, 0, 127, 0.55);
 }
 
 .games-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
 }
 </style>

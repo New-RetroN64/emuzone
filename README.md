@@ -1,1 +1,1 @@
-# Emuzone - Katalog Gier Retro
+# Emuzone - Katalog Klasycznych Gier Wideo

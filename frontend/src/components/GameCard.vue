@@ -14,7 +14,7 @@ defineEmits(['select'])
     <div class="card-image-wrapper">
       <img :src="game.imageUrl" :alt="game.title" class="card-image" loading="lazy" />
       <span class="card-year">{{ game.releaseYear }}</span>
-      <span class="card-rating">⭐ {{ game.rating }}</span>
+      <span class="card-rating" title="Średnia ocen">⭐ {{ game.rating }}</span>
     </div>
 
     <div class="card-body">
@@ -23,7 +23,7 @@ defineEmits(['select'])
       <p class="card-genre">{{ game.genre }} • {{ game.players }}</p>
 
       <button type="button" class="card-btn">
-        Pokaż zawartość obiektu →
+        Szczegóły
       </button>
     </div>
   </article>
@@ -31,60 +31,71 @@ defineEmits(['select'])
 
 <style scoped>
 .game-card {
-  background: #1e293b;
-  border: 1px solid #334155;
-  border-radius: 14px;
+  background: rgba(8, 8, 18, 0.9);
+  border: 1px solid rgba(0, 243, 255, 0.35);
+  border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.08);
 }
 
 .game-card:hover {
-  transform: translateY(-4px);
-  border-color: #6366f1;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  border-color: #ff007f;
+  box-shadow: 0 0 20px rgba(255, 0, 127, 0.45), 0 0 35px rgba(0, 243, 255, 0.2);
 }
 
 .card-image-wrapper {
   position: relative;
-  height: 180px;
-  background: #0f172a;
+  height: 260px;
+  padding: 1rem;
+  background: radial-gradient(circle at center, rgba(0, 243, 255, 0.14) 0%, #05050a 85%);
+  border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.85));
+  transition: transform 0.25s ease;
 }
 
 .card-year {
   position: absolute;
   top: 10px;
   left: 10px;
-  background: rgba(15, 23, 42, 0.85);
-  color: #e2e8f0;
+  background: rgba(5, 5, 12, 0.9);
+  color: #00f3ff;
+  border: 1px solid #00f3ff;
   padding: 0.25rem 0.6rem;
   border-radius: 6px;
   font-size: 0.75rem;
   font-weight: 700;
+  box-shadow: 0 0 8px rgba(0, 243, 255, 0.3);
 }
 
 .card-rating {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: rgba(79, 70, 229, 0.9);
-  color: #ffffff;
+  background: rgba(5, 5, 12, 0.9);
+  color: #ff007f;
+  border: 1px solid #ff007f;
   padding: 0.25rem 0.6rem;
   border-radius: 6px;
   font-size: 0.75rem;
   font-weight: 700;
+  box-shadow: 0 0 8px rgba(255, 0, 127, 0.35);
 }
 
 .card-body {
-  padding: 1.1rem;
+  padding: 1.15rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -93,40 +104,45 @@ defineEmits(['select'])
 .card-platform {
   font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: #818cf8;
+  letter-spacing: 1px;
+  color: #00f3ff;
   font-weight: 700;
   margin-bottom: 0.35rem;
 }
 
 .card-title {
-  font-size: 1.2rem;
-  color: #f8fafc;
+  font-size: 1.25rem;
+  color: #ffffff;
   margin: 0 0 0.4rem 0;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
 }
 
 .card-genre {
   font-size: 0.85rem;
   color: #94a3b8;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.1rem 0;
 }
 
 .card-btn {
   margin-top: auto;
   width: 100%;
-  padding: 0.65rem;
-  background: rgba(99, 102, 241, 0.15);
-  color: #a5b4fc;
-  border: 1px solid rgba(99, 102, 241, 0.35);
+  padding: 0.7rem;
+  background: transparent;
+  color: #ff007f;
+  border: 1px solid #ff007f;
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.2s ease;
+  box-shadow: inset 0 0 8px rgba(255, 0, 127, 0.2);
 }
 
 .game-card:hover .card-btn {
-  background: #4f46e5;
+  background: #ff007f;
   color: #ffffff;
+  box-shadow: 0 0 15px rgba(255, 0, 127, 0.7);
 }
 </style>

@@ -30,7 +30,7 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,ico,png,svg,json}'],
         runtimeCaching: [
           {
-            urlPattern: /^https:\/\/images\.unsplash\.com\/.*/i,
+            urlPattern: /^https:\/\/.*\.(?:png|jpg|jpeg|svg|webp|gif).*/i,
             handler: 'CacheFirst',
             options: {
               cacheName: 'external-game-images',
