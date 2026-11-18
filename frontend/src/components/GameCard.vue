@@ -13,14 +13,12 @@ defineEmits(['select'])
   <article class="game-card" @click="$emit('select', game)">
     <div class="card-image-wrapper">
       <img :src="game.imageUrl" :alt="game.title" class="card-image" loading="lazy" />
-      <span class="card-year">{{ game.releaseYear }}</span>
-      <span class="card-rating" title="Średnia ocen">⭐ {{ game.rating }}</span>
     </div>
 
     <div class="card-body">
       <span class="card-platform">{{ game.platform }}</span>
       <h2 class="card-title">{{ game.title }}</h2>
-      <p class="card-genre">{{ game.genre }} • {{ game.players }}</p>
+      <p class="card-genre">{{ game.genre }}</p>
 
       <button type="button" class="card-btn">
         Szczegóły

@@ -36,9 +36,9 @@ const closeGameModal = () => {
     <main class="main-container">
       <section class="intro-bar">
         <div>
-          <h2 class="section-title">Biblioteka Gier <span>({{ filteredGames.length }})</span></h2>
+          <h2 class="section-title">Biblioteka Gier</h2>
           <p class="section-desc">
-            Wybierz tytuł z katalogu, aby poznać jego szczegóły, specyfikację techniczną oraz twórców.
+            Wybierz tytuł z katalogu, aby poznać jego szczegóły.
           </p>
         </div>
 
@@ -46,7 +46,7 @@ const closeGameModal = () => {
           <input
             v-model="searchQuery"
             type="search"
-            placeholder="Szukaj tytułu, konsoli lub gatunku..."
+            placeholder="Wyszukaj..."
             class="search-input"
           />
         </div>

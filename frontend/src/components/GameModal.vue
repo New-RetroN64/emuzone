@@ -13,7 +13,6 @@ const emit = defineEmits(['close'])
 const showTechSpecs = ref(false)
 const showCreatorInfo = ref(false)
 
-// Słowniki tłumaczące techniczne klucze z pliku JSON na czytelne etykiety
 const techLabels = {
   rozdzielczosc: 'Rozdzielczość obrazu',
   ukladDzwiekowy: 'Układ dźwiękowy',
@@ -49,21 +48,18 @@ watch(
           <span class="modal-platform-tag">{{ game.platform }}</span>
           <h2 class="modal-title">{{ game.title }}</h2>
         </div>
-        <button class="close-btn" @click="emit('close')" aria-label="Zamknij okno">✕</button>
       </div>
 
       <div class="modal-content">
-        <!-- Okładka gry (dopasowana z zachowaniem proporcji) -->
         <div class="boxart-showcase">
           <img :src="game.imageUrl" :alt="game.title" class="modal-image" />
           <div class="resource-link-bar">
             <a :href="game.imageUrl" target="_blank" rel="noopener noreferrer">
-              Zobacz pełną okładkę w oryginalnym rozmiarze ↗
+              Oryginalny rozmiar↗
             </a>
           </div>
         </div>
 
-        <!-- Sekcja: Szczegóły -->
         <h3 class="section-heading">Szczegóły</h3>
         <div class="details-grid">
           <div class="detail-item">
@@ -87,7 +83,7 @@ watch(
             <span class="detail-value highlight-pink">⭐ {{ game.rating }}</span>
           </div>
           <div class="detail-item">
-            <span class="detail-label">Tryb gry:</span>
+            <span class="detail-label">Ilość graczy:</span>
             <span class="detail-value">{{ game.players }}</span>
           </div>
         </div>
@@ -120,7 +116,6 @@ watch(
             </div>
           </div>
 
-          <!-- KONTROLKA 2: Twórcy i wydanie -->
           <div class="nested-box">
             <button
               type="button"

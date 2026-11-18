@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Super Mario Bros.",
     "releaseYear": 1985,
-    "platform": "NES (Nintendo Entertainment System)",
+    "platform": "NES",
     "genre": "Platformówka 2D",
     "rating": "9.6/10",
     "players": "1-2 graczy",
@@ -25,7 +25,7 @@
     "id": 2,
     "title": "The Legend of Zelda",
     "releaseYear": 1986,
-    "platform": "NES (Nintendo Entertainment System)",
+    "platform": "NES",
     "genre": "Przygodowa gra akcji",
     "rating": "9.4/10",
     "players": "1 gracz",
@@ -39,7 +39,7 @@
     "creatorInfo": {
       "producent": "Nintendo R&D4",
       "wydawca": "Nintendo",
-      "glownyProjektant": "Shigeru Miyamoto & Takashi Tezuka",
+      "glownyProjektant": "Shigeru Miyamoto i Takashi Tezuka",
       "krajPochodzenia": "Japonia"
     }
   },
@@ -48,7 +48,7 @@
     "title": "Sonic the Hedgehog",
     "releaseYear": 1991,
     "platform": "Sega Mega Drive / Genesis",
-    "genre": "Szybka platformówka",
+    "genre": "Platformówka 2D",
     "rating": "9.2/10",
     "players": "1 gracz",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/ba/Sonic_the_Hedgehog_1_Genesis_box_art.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -61,7 +61,7 @@
     "creatorInfo": {
       "producent": "Sonic Team",
       "wydawca": "Sega",
-      "glownyProjektant": "Yuji Naka & Hirokazu Yasuhara",
+      "glownyProjektant": "Yuji Naka i Hirokazu Yasuhara",
       "krajPochodzenia": "Japonia"
     }
   },
@@ -69,10 +69,10 @@
     "id": 4,
     "title": "Doom",
     "releaseYear": 1993,
-    "platform": "PC (MS-DOS)",
-    "genre": "Strzelanka pierwszoosobowa (FPS)",
+    "platform": "PC",
+    "genre": "Strzelanka pierwszoosobowa",
     "rating": "9.8/10",
-    "players": "1-4 graczy (Sieć IPX / Modem)",
+    "players": "1-4 graczy",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/5/57/Doom_cover_art.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
     "technicalSpecs": {
       "rozdzielczosc": "320 x 200 px (VGA Mode 13h)",
@@ -83,7 +83,7 @@
     "creatorInfo": {
       "producent": "id Software",
       "wydawca": "id Software",
-      "glownyProjektant": "John Carmack & John Romero",
+      "glownyProjektant": "John Carmack i John Romero",
       "krajPochodzenia": "Stany Zjednoczone"
     }
   },
@@ -91,7 +91,7 @@
     "id": 5,
     "title": "Chrono Trigger",
     "releaseYear": 1995,
-    "platform": "SNES (Super Nintendo)",
+    "platform": "SNES",
     "genre": "jRPG",
     "rating": "9.9/10",
     "players": "1 gracz",
@@ -105,7 +105,7 @@
     "creatorInfo": {
       "producent": "Square",
       "wydawca": "Square",
-      "glownyProjektant": "Hironobu Sakaguchi & Yuji Horii",
+      "glownyProjektant": "Hironobu Sakaguchi i Yuji Horii",
       "krajPochodzenia": "Japonia"
     }
   },
@@ -113,10 +113,10 @@
     "id": 6,
     "title": "Pac-Man",
     "releaseYear": 1980,
-    "platform": "Automaty Arcade",
-    "genre": "Zręcznościowa / Labirynt",
+    "platform": "Arcade",
+    "genre": "Zręcznościowa",
     "rating": "9.0/10",
-    "players": "1-2 graczy (naprzemiennie)",
+    "players": "1-2 graczy",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/1/16/Pac_flyer.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
     "technicalSpecs": {
       "rozdzielczosc": "224 x 288 px (Ekran pionowy CRT)",
@@ -135,10 +135,10 @@
     "id": 7,
     "title": "Tetris",
     "releaseYear": 1989,
-    "platform": "Nintendo Game Boy",
+    "platform": "Game Boy",
     "genre": "Logiczna",
     "rating": "9.7/10",
-    "players": "1-2 graczy (kabel Game Link)",
+    "players": "1-2 graczy",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/4a/Tetris_Boxshot.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
     "technicalSpecs": {
       "rozdzielczosc": "160 x 144 px (4 odcienie zieleni)",
@@ -149,7 +149,7 @@
     "creatorInfo": {
       "producent": "Nintendo R&D1",
       "wydawca": "Nintendo",
-      "glownyProjektant": "Aleksiej Pażytnow & Henk Rogers",
+      "glownyProjektant": "Aleksiej Pażytnow i Henk Rogers",
       "krajPochodzenia": "ZSRR / Japonia"
     }
   },
@@ -157,8 +157,8 @@
     "id": 8,
     "title": "Metal Gear Solid",
     "releaseYear": 1998,
-    "platform": "Sony PlayStation (PS1)",
-    "genre": "Skradanka / Akcja",
+    "platform": "PlayStation",
+    "genre": "Akcja",
     "rating": "9.8/10",
     "players": "1 gracz",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/33/Metal_Gear_Solid_cover_art.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -179,10 +179,10 @@
     "id": 9,
     "title": "Street Fighter II: The World Warrior",
     "releaseYear": 1991,
-    "platform": "Automaty CPS-1 / SNES",
-    "genre": "Bijatyka 2D",
+    "platform": "Arcade",
+    "genre": "Bijatyka",
     "rating": "9.5/10",
-    "players": "1-2 graczy (Pojedynki)",
+    "players": "1-2 graczy",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/1/1d/SF2_JPN_flyer.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
     "technicalSpecs": {
       "rozdzielczosc": "384 x 224 px (CPS-1)",
@@ -193,7 +193,7 @@
     "creatorInfo": {
       "producent": "Capcom",
       "wydawca": "Capcom",
-      "glownyProjektant": "Akira Nishitani & Akira Yasuda",
+      "glownyProjektant": "Akira Nishitani i Akira Yasuda",
       "krajPochodzenia": "Japonia"
     }
   },
@@ -201,10 +201,10 @@
     "id": 10,
     "title": "Half-Life",
     "releaseYear": 1998,
-    "platform": "PC (Windows)",
-    "genre": "Strzelanka FPS / Sci-Fi",
+    "platform": "PC",
+    "genre": "Strzelanka pierwszoosobowa",
     "rating": "9.7/10",
-    "players": "1-32 graczy (Multiplayer LAN/Internet)",
+    "players": "1-32 graczy",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/f/fa/Half-Life_Cover_Art.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
     "technicalSpecs": {
       "rozdzielczosc": "800 x 600 px / 1024 x 768 px (OpenGL)",
@@ -215,7 +215,7 @@
     "creatorInfo": {
       "producent": "Valve Corporation",
       "wydawca": "Sierra Studios",
-      "glownyProjektant": "Gabe Newell & Marc Laidlaw",
+      "glownyProjektant": "Gabe Newell i Marc Laidlaw",
       "krajPochodzenia": "Stany Zjednoczone"
     }
   }
