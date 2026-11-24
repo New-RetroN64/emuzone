@@ -30,7 +30,6 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
         runtimeCaching: [
           {
-            // 1. Cache dla zewnętrznego pliku JSON (GitHub Gist / zewnętrzny host)
             urlPattern: ({ url }) =>
               url.pathname.endsWith('.json') ||
               url.hostname.includes('githubusercontent.com') ||
@@ -50,7 +49,6 @@ export default defineConfig({
             }
           },
           {
-            // 2. Cache dla zewnętrznych obrazków (okładki z Wikipedii i innych źródeł)
             urlPattern: ({ request }) => request.destination === 'image',
             handler: 'CacheFirst',
             options: {
