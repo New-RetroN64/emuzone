@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import { GAMES_JSON_URL } from './config.js'
+import { GAMES_JSON_URL } from './config.js' //Pobranie globalnego adresu URL do komponentu.
 import NavbarHeader from './components/NavbarHeader.vue'
 import GameCard from './components/GameCard.vue'
 import GameModal from './components/GameModal.vue'
@@ -13,6 +13,7 @@ const selectedGame = ref(null)
 const isLoading = ref(true)
 const errorMessage = ref('')
 
+// Mechanizm odpowiedzialny za pobieranie jsona
 const fetchGames = async () => {
   isLoading.value = true
   errorMessage.value = ''

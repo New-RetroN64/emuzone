@@ -1,13 +1,13 @@
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import { VitePWA } from 'vite-plugin-pwa'
+import { VitePWA } from 'vite-plugin-pwa' // Generowanie service workera i manifestu
 
 export default defineConfig({
   base: '/emuzone/',
   plugins: [
     vue(),
-    VitePWA({
+    VitePWA({ // Tutaj jest manifet
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'pwa-icon.svg'],
       manifest: {
