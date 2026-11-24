@@ -27,7 +27,6 @@ const fetchGames = async () => {
     const data = await response.json()
     games.value = Array.isArray(data) ? data : []
 
-    // Zapisujemy pobraną listę jako dodatkowy backup dla trybu offline
     localStorage.setItem(CACHE_KEY, JSON.stringify(games.value))
   } catch (error) {
     console.warn('Brak połączenia z zewnętrznym hostem, sprawdzam pamięć podręczną...', error)
@@ -92,13 +91,11 @@ const closeGameModal = () => {
         </div>
       </section>
 
-      <!-- Stan ładowania danych z zewnętrznego hosta -->
       <div v-if="isLoading" class="state-panel">
         <div class="neon-spinner"></div>
         <p class="state-text">Łączenie z bazą katalogu...</p>
       </div>
 
-      <!-- Stan błędu (np. brak internetu przy pierwszym uruchomieniu) -->
       <div v-else-if="errorMessage" class="state-panel error-panel">
         <p class="error-text">{{ errorMessage }}</p>
         <button type="button" class="retry-btn" @click="fetchGames">
@@ -106,12 +103,10 @@ const closeGameModal = () => {
         </button>
       </div>
 
-      <!-- Brak wyników wyszukiwania -->
       <div v-else-if="filteredGames.length === 0" class="state-panel">
         <p class="state-text">Nie znaleziono gier pasujących do zapytania "{{ searchQuery }}".</p>
       </div>
 
-      <!-- Siatka gier -->
       <section v-else class="games-grid">
         <GameCard
           v-for="(game, index) in filteredGames"
@@ -204,7 +199,6 @@ const closeGameModal = () => {
   gap: 1.5rem;
 }
 
-/* Nowe style dopasowane do Twojej palety dla ekranu ładowania i błędów */
 .state-panel {
   background: rgba(5, 5, 12, 0.85);
   border: 1px solid rgba(0, 243, 255, 0.4);

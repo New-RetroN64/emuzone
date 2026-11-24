@@ -88,11 +88,9 @@ watch(
           </div>
         </div>
 
-        <!-- Dodatkowe sekcje rozwijane -->
         <h3 class="section-heading">Dodatkowe informacje</h3>
 
         <div class="nested-controls">
-          <!-- KONTROLKA 1: Specyfikacja -->
           <div class="nested-box">
             <button
               type="button"
